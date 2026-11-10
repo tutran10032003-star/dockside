@@ -10,25 +10,24 @@
     
     <style>
         :root {
-            --primary: #20b2aa;
-            --primary-hover: #179890;
-            --accent: #f4a261;
-            --bg-color: #e0f2f1;
+            --primary: #008080;
+            --primary-hover: #006666;
+            --accent: #ff9f43;
             --card-bg: #ffffff;
             --text-main: #2d3748;
-            --bubble-user: #20b2aa;
-            --bubble-bot: #f4fbfb;
+            --bubble-user: #008080;
+            --bubble-bot: #f0f7f7;
         }
 
         body {
             font-family: 'Quicksand', sans-serif;
-            background-color: var(--bg-color);
-            /* Vintage cute dot-grid background pattern thay thế hoàn toàn cho icon lỗi */
+            /* Nền gradient dưới lòng đại dương sâu thẳm kết hợp pattern sinh vật biển cute */
+            background: linear-gradient(135deg, #48cae4 0%, #0077b6 50%, #03045e 100%);
             background-image: 
-                radial-gradient(#b2dfdb 1.5px, transparent 1.5px), 
-                radial-gradient(#b2dfdb 1.5px, #e0f2f1 1.5px);
-            background-size: 30px 30px;
-            background-position: 0 0, 15px 15px;
+                /* Lớp pattern các icon sinh vật biển cute, vỏ sò, rong biển */
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ctext x='15' y='35' font-size='24' opacity='0.75'%3E🦀%3C/text%3E%3Ctext x='95' y='30' font-size='22' opacity='0.7'%3E⭐%3C/text%3E%3Ctext x='55' y='95' font-size='24' opacity='0.75'%3E🐚%3C/text%3E%3Ctext x='125' y='110' font-size='22' opacity='0.7'%3E🐟%3C/text%3E%3Ctext x='20' y='145' font-size='20' opacity='0.65'%3E🌿%3C/text%3E%3Ctext x='135' y='45' font-size='18' opacity='0.6'%3E🫧%3C/text%3E%3Ctext x='85' y='140' font-size='22' opacity='0.7'%3E🦑%3C/text%3E%3C/svg%3E"),
+                linear-gradient(135deg, #48cae4 0%, #0077b6 50%, #03045e 100%);
+            background-size: 160px 160px, cover;
             color: var(--text-main);
             margin: 0;
             padding: 0;
@@ -45,11 +44,11 @@
             max-height: 780px;
             background-color: var(--card-bg);
             border-radius: 28px;
-            box-shadow: 0 20px 50px rgba(32, 178, 170, 0.15), 0 10px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            border: 4px solid #ffffff;
+            border: 4px solid rgba(255, 255, 255, 0.9);
         }
 
         header {
@@ -178,7 +177,7 @@
         .suggestion-card:hover {
             border-color: var(--primary);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(32, 178, 170, 0.15);
+            box-shadow: 0 8px 20px rgba(0, 128, 128, 0.15);
             background-color: #f0fdfa;
         }
 
@@ -274,7 +273,7 @@
         input[type="text"]:focus {
             border-color: var(--primary);
             background-color: white;
-            box-shadow: 0 0 0 4px rgba(32, 178, 170, 0.15);
+            box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.15);
         }
 
         button.send-btn {
@@ -289,7 +288,7 @@
             align-items: center;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 4px 12px rgba(32, 178, 170, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 128, 128, 0.3);
         }
 
         button.send-btn:hover {
